@@ -1,0 +1,95 @@
+body {
+    display: grid;
+   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    font-family: 'Josefin Sans', 'Helvetica', sans-serif;
+    font-size: medium;
+
+  }
+
+  img {
+    justify-self: center;
+    align-self: center;
+    width:15%;
+  }
+  
+  header {
+    background: #348888;
+    padding: 2rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    grid-column: 1/6;
+  }
+  
+
+  nav { 
+    display: flex;
+    flex-direction: column;
+    background: #22babb;
+    padding: 1rem;
+    grid-column: 1/6;
+    font-size: 1.5em;
+    text-align: center;
+    }
+  
+  nav a {
+    color:black;
+    padding: 1rem;
+  }
+
+  nav a:hover {
+    color: white;
+  }
+
+  
+  main {
+    background: white;
+    grid-column: 1/6;
+    width: 80%;
+    margin: 0 auto;
+
+   
+  }
+
+  .card {
+    width: 100%;
+    grid-column: 2/5;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    border-radius: 5px;
+    border: 1px solid #f24405;
+    margin-bottom: 1rem;
+
+  }
+
+  section {
+    text-align: center;
+  }
+
+  li {
+    list-style-type: none;
+  }
+
+  h1{
+    font-size: 4rem;
+  }
+
+ h2 {
+    text-decoration-line: underline;
+    text-align: center;
+ }
+ h3 {
+    background: #f24405;
+    padding: 1rem;
+    border-radius: 5px 5px 0 0;
+    margin-top: auto;
+  }
+  
+
+  footer {
+    background: #22babb;
+    padding: 1rem;
+    text-align: center;
+    grid-column: 1/6;
+  }
+ 
