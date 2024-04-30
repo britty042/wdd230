@@ -1,0 +1,47 @@
+body {
+    font-family: 'Karla', sans-serif;
+    color: #3d3d3d;
+    font-size: 1.5rem;
+}
+
+header, footer {
+    background-color: #84B026;
+    padding: 2rem;
+    text-align: center;
+}
+
+.card, header, footer {
+    margin: 1rem auto;
+    border: 2px solid #173540;
+    max-width: 100%;
+}
+
+h1 {
+    font-size: 4rem;
+}
+
+
+
+main {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 3rem;
+}
+h3 {
+    background-color: #217373;
+    color: white;
+    padding: 1rem;
+    margin-top: auto;
+    font-size: 2rem;
+}
+
+h4, p {
+    padding: 1rem;
+    font-size: 1.5rem;
+}
+img {
+    max-width: 100%;
+    border-top: 2px solid #173540;
+    border-bottom: 2px solid #173540;
+}
+
