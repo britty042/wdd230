@@ -1,0 +1,11 @@
+@media screen and (min-width: 600px) {
+    nav {
+        flex-direction: row;
+    }
+
+    .container {
+        display: flex;
+        flex-direction: row;
+        grid-gap: 1.5rem;
+    }
+}

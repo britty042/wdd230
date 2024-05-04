@@ -47,23 +47,23 @@ body {
     background: white;
     grid-column: 1/6;
     width: 80%;
-    margin: 0 auto;
-
-   
+    margin: 0 auto; 
   }
 
+  
   .card {
-    width: 100%;
-    grid-column: 2/5;
+    display: flex;
+    flex-direction: column;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     border-radius: 5px;
     border: 1px solid #f24405;
     margin-bottom: 1rem;
-
+    width: 100%;
   }
 
   section {
     text-align: center;
+    
   }
 
   li {
@@ -79,11 +79,16 @@ body {
     text-decoration-line: underline;
     text-align: center;
  }
+
  h3 {
     background: #f24405;
     padding: 1rem;
     border-radius: 5px 5px 0 0;
-    margin-top: auto;
+    margin-top: 0px;
+  }
+
+  p { 
+    padding: 1rem;
   }
   
 

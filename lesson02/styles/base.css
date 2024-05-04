@@ -8,25 +8,34 @@ header, footer {
     background-color: #84B026;
     padding: 2rem;
     text-align: center;
+    width: auto;
 }
 
 .card, header, footer {
     margin: 1rem auto;
     border: 2px solid #173540;
-    max-width: 100%;
+    max-width: 100%;;    
 }
 
 h1 {
     font-size: 4rem;
 }
 
-
-
 main {
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: max-content;
     grid-gap: 3rem;
+    padding: 2rem;
 }
+
+.card {
+    display: flexbox;
+    flex-direction:column;
+    width: 100%;
+    position: relative;  
+}
+
+
 h3 {
     background-color: #217373;
     color: white;
@@ -39,9 +48,11 @@ h4, p {
     padding: 1rem;
     font-size: 1.5rem;
 }
+
 img {
-    max-width: 100%;
     border-top: 2px solid #173540;
     border-bottom: 2px solid #173540;
+    display: flex;
+    width: 100%;
 }
 

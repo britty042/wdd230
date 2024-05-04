@@ -12,9 +12,13 @@
     <meta property="og:type" content="website">
     <link rel="canonical" href="https:britty042.github.io/wdd230/lesson02/design-principles.html">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">    
     <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/design-principles-small.css">
+    <link rel="stylesheet" href="styles/design-principles-med.css">
+    <link rel="stylesheet" href="styles/design-principles-large.css">
 </head>
 <body>
    <header><h1>Design Principles Document</h1>
@@ -46,6 +50,8 @@
    <footer>
     <p>&copy; <span id="year"></span> | Brittney Child | Utah, United States of America</p>
     <script>document.getElementById("year").innerHTML = new Date().getFullYear();</script>
+    <p id="lastModified"></p>
+    <script>document.getElementById("lastModified").innerHTML = "Last Modified: " + document.lastModified</script>
    </footer>
 </body>
 </html>
