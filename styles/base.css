@@ -1,6 +1,6 @@
 body {
     display: grid;
-   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     font-family: 'Josefin Sans', 'Helvetica', sans-serif;
     font-size: medium;
 
@@ -87,7 +87,7 @@ body {
     margin-top: 0px;
   }
 
-  p { 
+  p a { 
     padding: 1rem;
   }
   
