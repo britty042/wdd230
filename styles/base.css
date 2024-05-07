@@ -21,27 +21,51 @@ body {
     align-items: center;
     grid-column: 1/6;
   }
+
+  #menu {
+    font-size: 1.5rem;
+    border: 0;
+    background: none;
+    color:#22babb;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+  }
+
+  #menu::before {
+    content: "☰";
+  }
   
 
-  nav { 
+  .navigation { 
     display: flex;
     flex-direction: column;
     background: #22babb;
+    list-style: none;
+    grid-column:1/6;
     padding: 1rem;
-    grid-column: 1/6;
     font-size: 1.5em;
     text-align: center;
     }
   
-  nav a {
+  .navigation a {
+    display: none;
+    text-align: center;
     color:black;
     padding: 1rem;
   }
 
-  nav a:hover {
+  .navigation a:hover {
     color: white;
   }
 
+  .open a {
+    display: block;
+  }
+
+  #menu.open::before{
+    content:"❌";
+  }
   
   main {
     background: white;
@@ -90,6 +114,18 @@ body {
   p a { 
     padding: 1rem;
   }
+
+  .google-map {
+    padding: 1rem;
+    position: relative;
+    display: grid;
+    grid-column: 1/6;
+}
+
+  .google-map iframe {
+    height: 100%;
+    width: 100%;    
+}
   
 
   footer {
