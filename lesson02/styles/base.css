@@ -23,7 +23,7 @@ h1 {
 
 main {
     display: grid;
-    grid-template-columns: max-content;
+    
     grid-gap: 3rem;
     padding: 2rem;
 }
@@ -31,7 +31,8 @@ main {
 .card {
     display: flex;
     flex-direction:column;
-    width: 100%;
+    width: 350px;
+    height: auto;
     position: relative;  
 }
 
