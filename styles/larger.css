@@ -21,4 +21,8 @@
     #menu {
         display: none;
     }
+
+    .google-map iframe {
+        height: 650px;
+    }
 }
