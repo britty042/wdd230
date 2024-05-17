@@ -1,0 +1,161 @@
+body {
+    font-family: 'Raleway', 'Nunito', sans-serif;
+    font-size: 1rem;
+    color: #5C5173;
+}
+
+header {   
+    background: #2D5F73;
+    align-items: center;
+    text-align: center;
+    padding: 1rem;
+    justify-content: space-between;
+   }
+
+
+.header-content {
+    display:flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+   }
+
+.logo {
+    float: left;
+    width: 150px;
+    height:auto;      
+}
+
+h1 {
+    color: #96CCD9;
+    font-style: italic;
+    text-align: center;
+    font-size: 3rem;
+}
+
+.social{
+    padding: 1rem;
+}
+
+.navigation{
+    background: #96CCD9;
+    justify-content: space-evenly;
+    height: 5rem;
+}
+
+#menu {
+    font-size: 1.5rem;
+    border: 0;
+    background: none;
+    color:#96CCD9;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+  }
+
+  #menu::before {
+    content: "☰";
+  }
+  
+  .navigation { 
+    display: flex;
+    flex-direction: column;
+    background: #96CCD9;
+    list-style: none;
+    grid-column:1/6;
+    padding: 1rem;
+    font-size: 1.5rem;
+    text-align: center;
+    }
+  
+  .navigation a {
+    display: none;
+    text-align: center;
+    color:black;
+    padding: 1rem;
+  }
+
+  .navigation a:hover {
+    color: white;
+  }
+
+  .open a {
+    display: block;
+  }
+
+  #menu.open::before{
+    content:"❌";
+  }
+
+  .hero-content {
+    display: grid;
+    justify-content: center;
+    grid-column: 2/8;
+   
+  }
+
+  .hero-image {
+    display: block;
+    padding: 1rem;
+    width: 90%;
+    max-width: 1350px;
+    margin: 0 auto;
+    position: relative;
+  }
+
+  .hero-message {
+    text-align: center;
+  }
+
+  h3{
+    font-size: 1.5rem;
+  }
+  
+  .goals-grid, .business-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 1.5rem;
+    padding: 1rem;
+    margin: 0 auto;
+    text-align: center;
+   
+  }
+
+  .leadership-goal, .collaboration-goal, .progress-goal, .community-goal {
+    display: flex;
+    flex-direction: column;   
+    border-radius: 5px;     
+    width: 320px;
+    height: auto;    
+  }
+
+  .current-events, .weather {
+    display:flex;
+    flex-direction: column;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    border-radius: 5px;   
+    margin-bottom: 1rem;
+    width: 100%;
+    height: auto;
+    text-align: center;
+}
+  
+footer {
+    background: #2D5F73;
+    align-items: center;
+    text-align: center;
+    padding: 1rem;
+    color: white;
+    
+ }
+ 
+ .logo_name{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+   }
+
+.copyright {
+    position: aboslute;
+    bottom: 1rem;
+}
+   

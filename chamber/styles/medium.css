@@ -1,0 +1,36 @@
+@media screen and (min-width: 500px) {
+    .header-content {
+        flex-direction: row;
+    } 
+
+    .social {
+        position: absolute;
+        top:2rem;
+        right: 2rem;
+        display:grid;
+        grid-template-columns: 1fr 1fr;
+        padding: 1rem;
+    }
+    
+    .navigation {
+        flex-direction: row;
+    }
+  
+    .navigation a {
+        display: block;
+        flex: 1 1 100%;
+    }   
+
+    #menu{
+        display: none;
+    }
+
+    .goals-grid, .business-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .logo_name {
+        flex-direction: row;
+        
+       }
+    }

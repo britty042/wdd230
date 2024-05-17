@@ -10,51 +10,128 @@
     to do so. ">
     <meta property="og:title" content="Brittney Child - WDD230 Chamber of Commerce Project">
     <meta property="og:type" content="Website">
-    <meta property="og:image" content="FILL THIS OUT!!!!">
+    <meta property="og:image" content="images/building.jpg">
     <meta property="og:url" content="https://britty042.github.io/wdd230/chamber">
     <link rel="canonical" href="https://britty042.github.io/wdd230/chamber">
     <link rel="icon" href="images/favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/medium.css">
+    <link rel="stylesheet" href="styles/larger.css">
 </head>
 <body>
-    <header>
-        <a id="logo_link" href="index.html">
-            <img class="logo" src="images/Chamber.png" alt="Logo Image">
-        </a>
-        <h1>Davis County Chamber of Commerce</h1>
-        <div class="social">
-            <a href="https://facebook.com" target="_blank">
-                <img src="images/facebook.png" alt="fb icon">
-            </a>
-            <a href="https://twitter.com" target="_blank">
-                <img src="images/twitter.png" alt="twitter icon">
-            </a>
-            <a href="https://instagram.com" target="_blank">
-                <img src="images/instagram.png" alt="instagram icon">
-            </a>
-            <a href="https://www.linkedin.com/" target="_blank">
-                <img src="images/linkedin.png" alt="linkedin icon">
-            </a>
-    </header>
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="discover.html">Discover</a>
-        <a href="directory.html">Directory</a>
-        <a href="join.html">Join</a>
-    </nav>
-    <main></main>
-    <footer>
-        <div class="logo_name">
-            <img class="foot_logo" src="images/Chamber.png" alt="Logo Image">
-            <h1>Davis County Chamber of Commerce</h1>
-            <p>Address: 3420 South Davis County Lane</p>
-            <p>Davis County, Utah</p>
-            <p>Phone Number: 801-555-7252</p>
-            <p>Email: info@daviscountychamber.com</p>
-        </div>
-        <div class="copyright">
-           <p>&copy; <span id="year"></span> | Brittney Child | WDD 230 Chamber Project| <span id="lastModified"></span> </p>
-        </div>
-    </footer>
+    <div id="content">
+        <header>
+            <div class="header-content">
+                <div class="logo-area">
+                    <a id="logo_link" href="index.html">
+                        <img class="logo" src="images/Chamber.png" alt="Logo Image">
+                    </a>
+                    <h1>Davis County Chamber of Commerce</h1>
+                </div>
+                <div class="social">
+                    <a href="https://facebook.com" target="_blank">
+                        <img src="images/facebook.png" alt="fb icon">
+                    </a>
+                    <a href="https://twitter.com" target="_blank">
+                        <img src="images/twitter.png" alt="twitter icon">
+                    </a>
+                    <a href="https://instagram.com" target="_blank">
+                        <img src="images/instagram.png" alt="instagram icon">
+                    </a>
+                    <a href="https://www.linkedin.com/" target="_blank">
+                        <img src="images/linkedin.png" alt="linkedin icon">
+                    </a>
+                </div>
+            </div>        
+        </header>
+        <button id="menu"></button>
+        <nav class="navigation">
+            <a href="index.html">Home</a>
+            <a href="discover.html">Discover</a>
+            <a href="directory.html">Directory</a>
+            <a href="join.html">Join</a>
+        </nav>
+        <main>
+            <div class="hero-content">
+                <section class="hero-image">
+                    <img src="images/building.jpg" alt="Chamber of Commerce Builing">
+                </section>
+                <section class="hero-message">
+                    <h2>Our Mission</h2>
+                    <p>A PURPOSE STATEMENT FOR THE CHAMBER OF COMMERCE</p>
+                    <div class='button-box'>
+                        <a class="book" href="join.html">Join</a>
+                    </div>
+                </section>
+            </div>
+            <div class="goals-grid">
+                <section class="leadership-goal">
+                    <img src="images/leadership.jpg" alt="Leadership Team Meeting">
+                    <h4>Leadership</h4>
+                    <p>GOAL STATEMENT</p>
+                </section>
+                <section class="collaboration-goal">
+                    <img src="images/teamwork.jpg" alt="Hands together">
+                    <h4>Collaboration</h4>
+                    <p>GOAL STATEMENT</p>
+                </section>
+                <section class="progress-goal">
+                    <img src="images/progress.jpg" alt="Engineering Group">
+                    <h4>Progress</h4>
+                    <p>GOAL STATEMENT</p>
+                </section>
+                <section class="community-goal">
+                    <img src="images/children.jpg" alt="Group of Children">
+                    <h4>Community</h4>
+                    <p>GOAL STATEMENT</p>
+                </section>
+            </div>
+            <div class="current-events">
+                <h3>Summer BBQ!</h3>
+                <p>Join us for a summer barbeque held at the Davis Paviliion.  June 7th at 5:30 PM. Potluck style, meat will be provided.</p>
+            </div>
+            <div class="business-grid">
+                <section>
+                    <img src="images/simpla.jpg" alt="Simpla logo">
+                    <h4>Simpla</h4>
+                </section><section>
+                    <img src="images/crime.png" alt="Infinity Crime Labs logo">
+                    <h4>Infinity Crime Labs</h4>
+                </section><section>
+                    <img src="images/design.jpg" alt="Netland Design logo">
+                    <h4>Netland Design</h4>
+                </section>
+            </div>
+            <div class="weather">
+                <h3>Davis County Weather</h3>
+                <img src="PICTURE OF SUN" alt="Sun">
+                <p>Current Weather</p>
+            </div>
+        </main>
+        <footer>
+            <div class="logo_name">
+                <img class="foot_logo" src="images/Chamber.png" alt="Logo Image">
+                <h1>Davis County Chamber of Commerce</h1>
+                <div class="info">
+                <p>Address: 3420 South Davis County Lane</p>
+                <p>Davis County, Utah</p>
+                <p>Phone Number: 801-555-7252</p>
+                <p>Email: info@daviscountychamber.com</p>
+                </div>
+            </div>
+            <div class="copyright">
+            <p>&copy; <span id="year"></span> | Brittney Child | WDD 230 Chamber Project | <span id="lastModified"></span> </p>
+            </div>
+        </footer>
+    </div>
     <script src="scripts/getdates.js"></script>
+    <script src="scripts/responsivemenu.js"></script>
 </body>
 </html>

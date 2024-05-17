@@ -1,0 +1,35 @@
+@media screen and (min-width:1200px) {
+   
+    .social {
+        position: absolute;
+        top:2rem;
+        right: 2rem;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+
+    .navigation {
+        flex-direction: row;
+    }
+  
+    .navigation a {
+        display: block;
+        flex: 1 1 100%;
+    }   
+
+    #menu{
+        display: none;
+    }
+
+    .hero-image {
+        width: 100%;
+      }
+      
+    .goals-grid{
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    justify-content: center;
+    }
+
+    .business-grid {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
