@@ -33,9 +33,6 @@ h1 {
     font-size: 3rem;
 }
 
-.social{
-    padding: 1rem;
-}
 
 .navigation{
     background: #96CCD9;
@@ -154,6 +151,11 @@ footer {
     flex-direction: column;
     justify-content: space-evenly;
    }
+
+.social{
+    padding: 1rem;
+}
+
 
 .copyright {
     

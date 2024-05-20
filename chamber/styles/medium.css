@@ -3,15 +3,7 @@
         flex-direction: row;
     } 
 
-    .social {
-        position: absolute;
-        top:2rem;
-        right: 2rem;
-        display:grid;
-        grid-template-columns: 1fr 1fr;
-        padding: 1rem;
-    }
-    
+      
     .navigation {
         flex-direction: row;
     }
