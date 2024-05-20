@@ -94,8 +94,8 @@ h1 {
   .hero-image {
     display: block;
     padding: 1rem;
-    width: 90%;
-    max-width: 1350px;
+    width: 100%;
+    height: auto;
     margin: 0 auto;
     position: relative;
   }
@@ -117,13 +117,15 @@ h1 {
     text-align: center;
    
   }
+img {
+    max-width: 100%;
+}
 
   .leadership-goal, .collaboration-goal, .progress-goal, .community-goal {
     display: flex;
     flex-direction: column;   
     border-radius: 5px;     
-    width: 320px;
-    height: auto;    
+      
   }
 
   .current-events, .weather {
