@@ -1,6 +1,7 @@
 const input = document.querySelector("#favchap");
 const button = document.querySelector("button");
 const list = document.querySelector("#list");
+let el = document.getElementById("close-button");
 
 button.addEventListener("click", () => {
     if (input.value !== "") {
@@ -27,3 +28,8 @@ button.addEventListener("click", () => {
     }
     ;
 });
+
+console.log(el.ariaLabel); // "Close"
+el.ariaLabel = "Close dialog";
+console.log(el.ariaLabel); // "Close dialog"
+
