@@ -23,7 +23,8 @@ header {
 .logo {
     float: left;
     width: 150px;
-    height:auto;      
+    height:auto;  
+    padding: 1rem;    
 }
 
 h1 {
@@ -40,14 +41,78 @@ h1 {
     height: 5rem;
 }
 
+.switch {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    width: 60px;
+    height: 34px;
+  }
+  
+  .switch input { 
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #96CCD9;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: #5C5173;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  input:checked + .slider {
+    background-color: black;
+  }
+  
+  input:focus + .slider {
+    box-shadow: 0 0 1px black;
+  }
+  
+  input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+  }
+
+  .dark-mode {
+    background-color: black;
+    color: white;
+  }
+  
+  .slider.round {
+    border-radius: 34px;
+  }
+  
+  .slider.round:before {
+    border-radius: 50%;
+  }
+
 #menu {
     font-size: 1.5rem;
     border: 0;
     background: none;
-    color:#96CCD9;
-    position: absolute;
-    top: 1rem;
-    right: 1rem;
+    color:white;
+    position: relative;
+   
   }
 
   #menu::before {
@@ -63,12 +128,13 @@ h1 {
     padding: 1rem;
     font-size: 1.5rem;
     text-align: center;
+    height: auto;
   }
   
   .navigation a {
     display: none;
     text-align: center;
-    color:black;
+    color:#5C5173;
     padding: 1rem;
   }
 
@@ -86,26 +152,41 @@ h1 {
 
   .hero-content {
     display: grid;
-    justify-content: center;
-    grid-column: 2/8;
-   
+    grid-template-columns: 1fr 3fr 1fr;
+    justify-content: center;   
   }
 
   .hero-image {
-    display: block;
     padding: 1rem;
     width: 100%;
     height: auto;
-    margin: 0 auto;
-    position: relative;
+    margin: 0auto;
+    align-content: center;
+    grid-column: 2/3;   
+    
   }
 
   .hero-message {
     text-align: center;
+    font-size: 1.75rem;
+    grid-column: 2/3;
   }
 
+  .book {
+    background-color: #5C5173;
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 15px 30px;
+   
+    border-radius: 5px;
+  }
   h3{
     font-size: 1.5rem;
+  }
+
+  p {
+    font-size: 1.25rem;
   }
   
   .goals-grid, .business-grid {
@@ -115,8 +196,12 @@ h1 {
     padding: 1rem;
     margin: 0 auto;
     text-align: center;
-   
   }
+
+  h4 {
+    font-size: 1.5rem;
+  }
+
 img {
     max-width: 100%;
 }
@@ -138,6 +223,15 @@ img {
     height: auto;
     text-align: center;
 }
+
+.events {
+    list-style-type: none;
+    padding: 0.5rem;
+    line-height: 3rem;
+    font-size: 1.25rem;
+}
+
+
   
 footer {
     background: #2D5F73;
