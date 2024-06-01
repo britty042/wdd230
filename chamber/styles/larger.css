@@ -13,10 +13,6 @@
         display: none;
     }
 
-    .hero-image {
-        width: 100%;
-      }
-
     .goals-grid{
     grid-template-columns: 1fr 1fr 1fr 1fr;
     justify-content: center;

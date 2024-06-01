@@ -51,7 +51,11 @@
         <main>
             <div class="hero-content">
                 <div class="hero-image">
-                    <img src="images/building.webp" alt="Chamber of Commerce Builing">
+                    <picture>
+                        <source srcset="images/wdd230-org-small.webp" media="(max-width: 500px)">
+                        <source srcset="images/wdd230-org-medium.webp" media="(max-width: 1000px)">
+                        <img src="images/wdd230-org-large.webp" alt="Chamber of Commerce team" width="1500" height="1000">
+                    </picture>
                 </div>
                 <section class="hero-message">
                     <h2>Our Mission</h2>
@@ -107,7 +111,9 @@
             </div>
             <div class="weather">
                 <h3>Davis County Weather</h3>
-                <p>Current Weather</p>
+                <p>Temperature: <span id="temp">45</span>&deg;F</p>
+                <p>Wind Speed: <span id="wind-speed">6.7</span> mph</p>
+                <p>Wind Chill: <span id="wind-chill"></span></p>
             </div>
         </main>
         <footer>
@@ -142,5 +148,6 @@
     </div>
     <script src="scripts/getdates.js"></script>
     <script src="scripts/responsivemenu.js"></script>
+    <script src="scripts/windchill.js"></script>
 </body>
 </html>
