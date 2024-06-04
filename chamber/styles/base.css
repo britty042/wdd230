@@ -224,8 +224,6 @@ h1 {
     line-height: 3rem;
     font-size: 1.25rem;
 }
-
-
   
 footer {
     background: #2D5F73;
@@ -246,6 +244,38 @@ footer {
     padding: 1rem;
 }
 
+
+/* Discover Page*/
+
+.discover {
+  display: flex;
+  flex-direction: column;
+}
+
+
+.history, .demograph, .events {
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    border-radius: 5px;
+    border: 1px solid #5C5173;
+    margin: 1rem;
+    width: auto;
+    text-align: center;
+    padding: 1.5rem;
+}
+
+.images img{
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.images p {
+  text-align: center;
+  font-size: 0.75rem;
+}
 
 
    

@@ -25,4 +25,20 @@
         flex-direction: row;
         
        }
+       
+    /*Discover Page*/
+       
+    .discover {
+        display: grid;
+        grid-template-columns: 1fr 2fr 1fr 2fr 1fr;
     }
+        
+    .information{
+        grid-column: 1/4;
+    }
+        
+    .images{
+        grid-column: 4/6;
+    }
+}
+
