@@ -252,8 +252,12 @@ footer {
   flex-direction: column;
 }
 
+.visits {
+  padding: 1rem;
+}
 
-.history, .demograph, .events {
+
+.history, .demograph, .events-list {
     display: flex;
     flex-direction: column;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
@@ -263,6 +267,12 @@ footer {
     width: auto;
     text-align: center;
     padding: 1.5rem;
+}
+
+.information ul  {
+  list-style: none;
+  margin: 0 auto;
+  font-size: 1.25rem;
 }
 
 .images img{
