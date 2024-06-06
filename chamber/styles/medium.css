@@ -40,5 +40,11 @@
     .images{
         grid-column: 4/6;
     }
+
+    .images img:hover {
+        opacity: 50%;
+        background: black;
+    }
+
 }
 
