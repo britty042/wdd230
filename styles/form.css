@@ -86,3 +86,16 @@
 .wf1 input[type="submit"]:hover {
     background-image: linear-gradient(#2D5F73, #96CCD9);
 }
+
+.confirmation {
+    text-align: center;
+}
+.confirmation h1 {
+    color: var(--main-color);
+    
+}
+
+.confirmation p {
+    color: var(--secondary-color);
+    font-size: 1.75rem;
+}
