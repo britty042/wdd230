@@ -5,11 +5,10 @@
 
 .wf1 fieldset {
     margin:2rem 0;
-    border: 1 px solid lightgray;
+    border: 1px solid lightgrey;
     border-radius: 6px;
     padding: .5rem;
-    max-width: 500px;
-    
+    max-width: 500px;    
 }
 
 .wf1 legend {
@@ -67,7 +66,7 @@
 }
 
 .wf1 #rangevalues option {
-	padding-right: 1.83rem;
+	padding-right: 1.75rem;
     padding-top: .5rem;
 }
 
