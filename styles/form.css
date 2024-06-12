@@ -25,6 +25,7 @@
 
 
 .wf1 input[type="text"],
+.wf1 input[type="password"],
 .wf1 input[type="email"]
  {
     background-color: #eee;
