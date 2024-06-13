@@ -11,6 +11,11 @@
     max-width: 500px;    
 }
 
+#formmessage {
+    margin: 1rem;
+    color: red;
+}
+
 .wf1 legend {
     color: var(--main-color);
     padding: 0 .5rem;
