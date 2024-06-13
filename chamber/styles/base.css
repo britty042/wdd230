@@ -1,3 +1,10 @@
+:root {
+  --main-color: #2D5F73;
+  --secondary-color: #5C5173;
+  --accent-color-1: #96CCD9;
+  --accent-color-2: #8B5A8C;
+}
+
 body {
     font-family: 'Raleway', 'Nunito', sans-serif;
     font-size: 1rem;
@@ -5,7 +12,7 @@ body {
 }
 
 header {   
-    background: #2D5F73;
+    background: var(--main-color);
     align-items: center;
     text-align: center;
     padding: 1rem;
@@ -35,7 +42,7 @@ h1 {
 
 
 .navigation {
-    background: #96CCD9;
+    background: var(--accent-color-1);
     justify-content: space-evenly;
     height: 5rem;
     font-weight: bold;
@@ -63,7 +70,7 @@ h1 {
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: #96CCD9;
+    background-color: var(--accent-color-1);
     transition: .4s;
   }
   
@@ -74,7 +81,7 @@ h1 {
     width: 26px;
     left: 4px;
     bottom: 4px;
-    background-color: #5C5173;
+    background-color: var(--secondary-color);
     transition: .4s;
   }
   
@@ -115,7 +122,7 @@ h1 {
   .navigation { 
     display: flex;
     flex-direction: column;
-    background: #96CCD9;
+    background: var(--accent-color-1);
     list-style: none;
     grid-column:1/6;
     padding: 1rem;
@@ -127,7 +134,7 @@ h1 {
   .navigation a {
     display: none;
     text-align: center;
-    color:#5C5173;
+    color:var(--secondary-color);
     padding: 1rem;
   }
 
@@ -167,7 +174,7 @@ h1 {
   }
 
   .book {
-    background-color: #5C5173;
+    background-color:var(--secondary-color);
     color: white;
     text-decoration: none;
     font-size: 18px;
@@ -226,7 +233,7 @@ h1 {
 }
   
 footer {
-    background: #2D5F73;
+    background: var(--main-color);
     align-items: center;
     text-align: center;
     padding: 1rem;
@@ -287,5 +294,48 @@ footer {
   font-size: 0.75rem;
 }
 
+/*Join Page*/
+
+
+.wf1 fieldset {
+  margin:2rem 0;
+  border: 1px solid lightgrey;
+  border-radius: 6px;
+  padding: .5rem;
+  max-width: 500px;    
+}
+
+#formmessage {
+  margin: 1rem;
+  color: red;
+}
+
+.wf1 legend {
+  color: var(--main-color);
+  padding: 0 .5rem;
+}
+
+.wf1 label{
+  display: block;
+  padding-top: 1rem;
+  color:var(--secondary-color);
+  font-size: .9rem;
+}
+
+
+.wf1 input[type="text"],
+.wf1 input[type="password"],
+.wf1 input[type="email"]
+{
+  background-color: #eee;
+  display: block;
+  border: solid 1px grey;
+  border-radius: 6px;
+  padding: .75rem;
+  color: #555;
+  width: 100%;
+  max-width: 375px;
+  appearance: none;
+}
 
    
