@@ -21,4 +21,14 @@
     .business-grid {
         grid-template-columns: 1fr 1fr 1fr;
     }
+
+/*Join Page*/
+.joinpage {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    }
+
+.joinmessage {
+    column-span: 2;
+}
 }

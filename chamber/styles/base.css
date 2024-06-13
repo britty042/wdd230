@@ -295,19 +295,21 @@ footer {
 }
 
 /*Join Page*/
-
+.joinpage {
+  display: grid;
+  grid-template-columns: 1fr;
+  
+}
+.joinmessage{
+  color:var(--main-color);
+}
 
 .wf1 fieldset {
   margin:2rem 0;
   border: 1px solid lightgrey;
   border-radius: 6px;
   padding: .5rem;
-  max-width: 500px;    
-}
-
-#formmessage {
-  margin: 1rem;
-  color: red;
+  max-width: 400px;    
 }
 
 .wf1 legend {
@@ -325,7 +327,9 @@ footer {
 
 .wf1 input[type="text"],
 .wf1 input[type="password"],
-.wf1 input[type="email"]
+.wf1 input[type="email"],
+.wf1 input[type="tel"]
+
 {
   background-color: #eee;
   display: block;
@@ -338,4 +342,37 @@ footer {
   appearance: none;
 }
 
-   
+#description {
+  padding-bottom: 3rem;
+}
+
+.nonprofit, .bronze, .silver, .gold{
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  border-radius: 5px;
+  border: 1px solid var(--secondary-color);
+  margin: 1rem;
+  width: auto;
+  text-align: center;
+  padding: 1.5rem;
+}  
+
+#benefits h2 {
+  background-color: var(--accent-color-2);
+  color: white;
+  font-size: 2.5rem;
+  padding: 3rem;
+  margin-top:0px;
+  border-radius: 5px;
+}
+
+#benefits h3 {
+  font-size: 1.25rem;
+  margin-top:0;
+}
+
+#benfits li {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
