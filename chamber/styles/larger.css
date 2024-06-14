@@ -29,6 +29,11 @@
     }
 
 .joinmessage {
-    column-span: 2;
+    column-span: all;
 }
+
+#benefits ul{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
 }

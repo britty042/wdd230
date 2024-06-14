@@ -296,20 +296,23 @@ footer {
 
 /*Join Page*/
 .joinpage {
-  display: grid;
-  grid-template-columns: 1fr;
-  
+  display: flex;
+  flex-direction: column;
+  margin: 0auto;  
 }
-.joinmessage{
+
+.joinmessage {
   color:var(--main-color);
 }
 
 .wf1 fieldset {
-  margin:2rem 0;
+  margin: 0 auto;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
   border: 1px solid lightgrey;
-  border-radius: 6px;
-  padding: .5rem;
-  max-width: 400px;    
+  border-radius: 6px;  
+  min-width: 375px;
+  max-width: 600px;
 }
 
 .wf1 legend {
@@ -328,8 +331,8 @@ footer {
 .wf1 input[type="text"],
 .wf1 input[type="password"],
 .wf1 input[type="email"],
-.wf1 input[type="tel"]
-
+.wf1 input[type="tel"],
+.wf1 textarea
 {
   background-color: #eee;
   display: block;
@@ -337,13 +340,47 @@ footer {
   border-radius: 6px;
   padding: .75rem;
   color: #555;
-  width: 100%;
-  max-width: 375px;
+  width: 90%;
+  min-width: 375px;
+  max-width: 575px;
+  appearance: none;
+}
+
+.wf1 select {
+  display: block;
+  border: solid 1px grey;
+  border-radius: 6px;
+  padding: .75rem;
+  width: 95%;
+  min-width: 400px;
+  max-width: 600px;
   appearance: none;
 }
 
 #description {
   padding-bottom: 3rem;
+}
+
+.wf1 input[type="submit"] {
+  border: none;
+  background-image: linear-gradient(var(--secondary-color), var(--accent-color-2));  
+  color: #fff;
+  padding: .8rem;
+  border-radius: 6px;
+  width: 96%;
+  max-width: 400px;
+  margin: 2rem 5rem 2rem 5rem;
+  box-shadow: 1px 1px 4px #999;
+}
+
+.wf1 input[type="submit"]:hover {
+  background-image: linear-gradient(var(--main-color), var(--accent-color-1));
+ 
+}
+
+#benefits {
+  margin: 0 auto;
+  width: 80%;
 }
 
 .nonprofit, .bronze, .silver, .gold{
@@ -352,19 +389,19 @@ footer {
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
   border-radius: 5px;
   border: 1px solid var(--secondary-color);
-  margin: 1rem;
-  width: auto;
+  margin-top: 1.75rem;
+  margin-bottom: 1.75rem;
+  width: 100%;
+  height: auto;
   text-align: center;
-  padding: 1.5rem;
 }  
 
 #benefits h2 {
   background-color: var(--accent-color-2);
   color: white;
-  font-size: 2.5rem;
-  padding: 3rem;
+  font-size: 2rem;
+  padding: 1rem;
   margin-top:0px;
-  border-radius: 5px;
 }
 
 #benefits h3 {
@@ -372,7 +409,31 @@ footer {
   margin-top:0;
 }
 
+#benefits ul{
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  line-height: 1.5rem;;
+}
+
 #benfits li {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  
+}
+
+
+
+.confirmation {
+  text-align: center;
+}
+.confirmation h1 {
+  color: var(--main-color);
+  
+}
+
+.confirmation p {
+  color: var(--secondary-color);
+  font-size: 1.75rem;
 }
