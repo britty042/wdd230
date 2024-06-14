@@ -298,7 +298,7 @@ footer {
 .joinpage {
   display: flex;
   flex-direction: column;
-  margin: 0auto;  
+  margin: 0 auto;  
 }
 
 .joinmessage {
