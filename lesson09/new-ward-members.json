@@ -1,0 +1,45 @@
+{
+    "wardInformation": {
+    "familyName": "Smith",
+    "moveInDate": "2010-04-01",
+    "numberInFamily": 7,
+    "visitedByBishopric": true,
+    "familyMembers": [
+      {
+        "name": "Brent James",
+        "gender": "Male",
+        "birthdate": "1960-07-03"
+      },
+      {
+        "name": "Lori James",
+        "gender": "Female",
+        "birthdate": "1961-04-04"
+      },
+      {
+        "name": "Chelsea James",
+        "gender": "Female",
+        "birthdate": "1984-12-29"
+      },
+      {
+        "name": "Brittney James",
+        "gender": "Female",
+        "birthdate": "1986-12-06"
+      },
+      {
+        "name": "Melissa James",
+        "gender": "Female",
+        "birthdate": "1990-01-05"
+      },
+      {
+        "name": "Ryan James",
+        "gender": "Male",
+        "birthdate": "1991-08-07"
+      },
+      {
+        "name": "Jessica James",
+        "gender": "Female",
+        "birthdate": "1992-12-18"
+      }
+    ]
+    }
+  }
