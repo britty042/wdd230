@@ -3,7 +3,7 @@ const linksURL = "https://britty042.github.io/wdd230/data/links.json";
 
 async function getLinkData() {
     const response = await fetch(linksURL);
-    const data= await response.json();
+    const data = await response.json();
     displayLinks(data.lessons);
 }
 
