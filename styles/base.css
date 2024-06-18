@@ -107,9 +107,10 @@ body {
   }
 
 
-  li {
+  .links-box {
     list-style-type: square;
     text-align: left;
+    margin: 1rem;
   }
 
   h1{
