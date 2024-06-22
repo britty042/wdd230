@@ -423,14 +423,12 @@ footer {
   
 }
 
-
-
 .confirmation {
   text-align: center;
 }
+
 .confirmation h1 {
-  color: var(--main-color);
-  
+  color: var(--main-color);  
 }
 
 .confirmation p {
@@ -440,9 +438,9 @@ footer {
 
 /*Directory Page*/
 
-.directory {
-  display: grid;
-  grid-template-columns: 1fr;
+.directory-grid h3{
+  text-align: center;
+  font-size: 2.5rem;
 }
 
 .company-card {
@@ -453,7 +451,7 @@ footer {
   margin-bottom: 1rem;
   width: 100%;
   height: auto;
-  max-width: 300px;
+  max-width: 400px;
   text-align: center;
 }
 
@@ -461,3 +459,15 @@ footer {
   width: 100%;
   height: auto;
 }
+
+.gold-display, .silver-display, .bronze-display {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 1.5rem;
+  padding: 1rem;
+  margin: 0 auto;
+  text-align: center;
+}
+
+
+

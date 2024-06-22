@@ -36,4 +36,10 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
   }
+
+   /*Directory Page*/
+   .gold-display {
+    grid-template-columns: 1fr 1fr 1fr;
+    }
+
 }
