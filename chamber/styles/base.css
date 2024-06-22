@@ -441,6 +441,11 @@ footer {
 .directory-grid h3{
   text-align: center;
   font-size: 2.5rem;
+  position: relative;
+}
+
+.list-view h3 {
+  margin-left: 1rem;
 }
 
 .company-card {
@@ -467,7 +472,14 @@ footer {
   padding: 1rem;
   margin: 0 auto;
   text-align: center;
+  justify-items: center;
 }
 
+.company-list-item {
+  margin-bottom: 1rem;
+}
 
-
+.company-list-item p {
+  margin: 0;
+  font-size: 1rem;
+}
