@@ -2,9 +2,9 @@
     "companies": [
       {
         "name": "Lifetime Products",
-        "address": "BUILDING D12 FREEPORT CENTER CLEARFIELD, UT 84016",
-        "phoneNumber": "1-800-225-3865",
-        "webURL":"https://www.lifetime.com/",
+        "address": "Building D12 Freeport Center Clearfield, UT, 84016",
+        "phoneNumber": "(800) 225-3865",
+        "webURL":"https://www.lifetime.com",
         "img":"images/lifetime.webp",
         "membership":"Gold"
       },
@@ -20,7 +20,7 @@
         "name": "Zaxby's",
         "address": "1781 N 2000 W Clinton, UT, 84015",
         "phoneNumber": "(801) 776-2222",
-        "webURL":"https://www.zaxbys.com/",
+        "webURL":"https://www.zaxbys.com",
         "img":"images/zaxby.webp",
         "membership":"Silver"
       },
@@ -28,7 +28,7 @@
         "name": "JoAnn",
         "address": "302 N Market Place Dr Centerville, UT 84014 ",
         "phoneNumber": "(801) 292-1114",
-        "webURL":"https://www.joann.com/",
+        "webURL":"https://www.joann.com",
         "img":"images/joann.webp",
         "membership":"Gold"
       },
@@ -36,15 +36,15 @@
         "name": "America First Credit Union",
         "address": "2280 Orchard Dr Bountiful, UT 84010 ",
         "phoneNumber": "(800) 999-3961",
-        "webURL":"https://www.americafirst.com/",
+        "webURL":"https://www.americafirst.com",
         "img":"images/afcu.webp",
         "membership":"Gold"
       },
       {
         "name": "Dairy Queen",
-        "address": "816 S MAIN ST Layton, UT 84041-4231",
+        "address": "816 S Main ST Layton, UT 84041-4231",
         "phoneNumber": "(801) 546-1111",
-        "webURL":"https://www.dairyqueen.com/",
+        "webURL":"https://www.dairyqueen.com",
         "img":"images/dairy-queen.webp",
         "membership":"Bronze"
       },
@@ -52,9 +52,9 @@
         "name": "Petco",
         "address": "1978 N 2000 W Clinton, UT 84015",
         "phoneNumber": "(801) 896-2510",
-        "webURL":"https://www.petco.com/",
+        "webURL":"https://www.petco.com",
         "img":"",
-        "membership":""
+        "membership":"Bronze"
       }
      
     ]

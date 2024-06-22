@@ -6,7 +6,4 @@
    });
 
 
-//For Join Page hidden element//
-var timeNow = Date.now();
 
-document.getElementById("datenow").value = timeNow;
