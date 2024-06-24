@@ -2,15 +2,15 @@ const p1 = document.querySelector("#password");
 const p2 = document.querySelector("#password2");
 const message = document.querySelector("#formmessage");
 
-p2.addEventListener("focusout", checkSame);
+p2.addEventListener("focusout", function() {
+	checkSame();
+	showMessage("");
+});
 
 
 function checkSame() {
 	if (p1.value !== p2.value) {
 		showMessage("Passwords do not match.  Please re-enter your passwords.");
-	
-		p2.value = "";
-		p2.focus();
 
 	} else {
 		noMessage();		

@@ -94,6 +94,11 @@
     border: 1px solid black;
 }
 
+#formmessage {
+    color: red; /* Example styling */
+    font-size: 14px; /* Example styling */
+}
+
 .confirmation {
     text-align: center;
 }
