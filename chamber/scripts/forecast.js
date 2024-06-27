@@ -66,7 +66,7 @@ document.addEventListener('DOMContentLoaded', function() {
             // Get the correct icon for the first entry for the specified date.
             const forecastedIconsrc = `https://openweathermap.org/img/w/${forecast[0].weather[0].icon}.png`;
             // Get the description for the first entry for the specified date and the first entry in weather.
-            let forecastedWeatherDescriptions = forecast[0].weather[0].map(item => {
+            let forecastedWeatherDescriptions = forecast[0].weather.map(item => {
                 let desc = item.description;
                 const words = desc.split(" ");
                 for (let i = 0; i < words.length; i ++) {
