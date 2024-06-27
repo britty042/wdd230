@@ -62,7 +62,7 @@ document.addEventListener('DOMContentLoaded', function() {
         let forecastList = document.querySelector("#forecast-list");
 
         // For each date...
-        dailyForecasts.forEach((forecast, index) => {       
+        dailyForecasts.forEach((forecast, index) => {
             // Get the correct icon for the first entry for the specified date.
             const forecastedIconsrc = `https://openweathermap.org/img/w/${forecast[0].weather[0].icon}.png`;
             // Get the description for the first entry for the specified date and the first entry in weather.
@@ -84,18 +84,19 @@ document.addEventListener('DOMContentLoaded', function() {
             let forecastedWeatherIcon = document.createElement("img");
             let captionDesc = document.createElement("p");
 
-            let forecastDate = new Date(forecast.dt * 1000);
+            let forecastDate = new Date(forecast[0].dt * 1000);
             weekday.textContent = forecastDate.toLocaleDateString("en-US", { weekday: "long" });
 
             forecastedWeatherIcon.setAttribute('src', forecastedIconsrc);
             forecastedWeatherIcon.setAttribute('alt', capitalizedDesc);
             captionDesc.textContent = `${capitalizedDesc}`;
 
-            forecastTemp.textContent = `Temperature: ${Math.round(forecast.temp.day)}°F`;
+            forecastTemp.textContent = `Temperature: ${Math.round(forecast[0].main.temp)}°F`;
 
             icon.appendChild(forecastedWeatherIcon);
             card.appendChild(weekday);
             card.appendChild(forecastTemp);
+            card.appendChild(icon);
             card.appendChild(captionDesc);
 
             forecastList.appendChild(card);
