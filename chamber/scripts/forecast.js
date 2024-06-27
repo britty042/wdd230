@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', function() {
             const response = await fetch(url);
             if (response.ok)  {
                 const data = await response.json();
-                groupedForecasts = getTempsByDate(data.list)
+                groupedForecasts = getTempsByDate(data.list) // groupedForecasts is a list of lists.  Multiple entries per date.
                 displayCurrentTemp(data.list[0]);
                 displayForecastTemps(groupedForecasts);
                 console.log(data);
@@ -60,13 +60,13 @@ document.addEventListener('DOMContentLoaded', function() {
 
     function displayForecastTemps(dailyForecasts) {
         let forecastList = document.querySelector("#forecast-list");
-        
 
+        // For each date...
         dailyForecasts.forEach((forecast, index) => {       
-
-            const forecastedIconsrc = `https://openweathermap.org/img/w/${forecast.weather[0].icon}.png`;
-        
-            let forecastedWeatherDescriptions = forecast.weather.map(item => {
+            // Get the correct icon for the first entry for the specified date.
+            const forecastedIconsrc = `https://openweathermap.org/img/w/${forecast[0].weather[0].icon}.png`;
+            // Get the description for the first entry for the specified date and the first entry in weather.
+            let forecastedWeatherDescriptions = forecast[0].weather[0].map(item => {
                 let desc = item.description;
                 const words = desc.split(" ");
                 for (let i = 0; i < words.length; i ++) {
