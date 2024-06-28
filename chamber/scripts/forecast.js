@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', function() {
             const response = await fetch(url);
             if (response.ok)  {
                 const data = await response.json();
-                groupedForecasts = getTempsByDate(data.list)
+                groupedForecasts = getTempsByDate(data.list) // groupedForecasts is a list of lists.  Multiple entries per date.
                 displayCurrentTemp(data.list[0]);
                 displayForecastTemps(groupedForecasts);
                 console.log(data);
@@ -60,13 +60,13 @@ document.addEventListener('DOMContentLoaded', function() {
 
     function displayForecastTemps(dailyForecasts) {
         let forecastList = document.querySelector("#forecast-list");
-        
 
-        dailyForecasts.forEach((forecast, index) => {       
-
-            const forecastedIconsrc = `https://openweathermap.org/img/w/${forecast.weather[0].icon}.png`;
-        
-            let forecastedWeatherDescriptions = forecast.weather.map(item => {
+        // For each date...
+        dailyForecasts.forEach((forecast, index) => {
+            // Get the correct icon for the first entry for the specified date.
+            const forecastedIconsrc = `https://openweathermap.org/img/w/${forecast[0].weather[0].icon}.png`;
+            // Get the description for the first entry for the specified date and the first entry in weather.
+            let forecastedWeatherDescriptions = forecast[0].weather.map(item => {
                 let desc = item.description;
                 const words = desc.split(" ");
                 for (let i = 0; i < words.length; i ++) {
@@ -84,18 +84,19 @@ document.addEventListener('DOMContentLoaded', function() {
             let forecastedWeatherIcon = document.createElement("img");
             let captionDesc = document.createElement("p");
 
-            let forecastDate = new Date(forecast.dt * 1000);
+            let forecastDate = new Date(forecast[0].dt * 1000);
             weekday.textContent = forecastDate.toLocaleDateString("en-US", { weekday: "long" });
 
             forecastedWeatherIcon.setAttribute('src', forecastedIconsrc);
             forecastedWeatherIcon.setAttribute('alt', capitalizedDesc);
             captionDesc.textContent = `${capitalizedDesc}`;
 
-            forecastTemp.textContent = `Temperature: ${Math.round(forecast.temp.day)}°F`;
+            forecastTemp.textContent = `Temperature: ${Math.round(forecast[0].main.temp)}°F`;
 
             icon.appendChild(forecastedWeatherIcon);
             card.appendChild(weekday);
             card.appendChild(forecastTemp);
+            card.appendChild(icon);
             card.appendChild(captionDesc);
 
             forecastList.appendChild(card);

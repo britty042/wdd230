@@ -22,6 +22,10 @@
         grid-template-columns: 1fr 1fr 1fr;
     }
 
+    #forecast-list {
+        grid-template-columns: repeat(6, 1fr);
+      }
+
 /*Join Page*/
 .joinpage {
     display: grid;

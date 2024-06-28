@@ -20,12 +20,23 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/base.css">
     <link rel="stylesheet" href="styles/medium.css">
     <link rel="stylesheet" href="styles/larger.css">
 </head>
 <body>
+    <div class="banner">
+        <div class="banner-content">
+            <div class="banner-text">
+                <strong>Chamber of Commerce Meet & Greet-Every Wednesday at 7:00 PM. </strong>
+            </div>
+            <button type="button" class="banner-close">
+                <span class="material-icons">close</span>   
+            </button>
+        </div>
+    </div>
     <div id="content">
         <header>
             <div class="header-content">
@@ -120,9 +131,8 @@
                     </figure>
                 </div>
                 <div class="forecast">
-                    <h4>3-Day Forecast</h4>
-                    <span id="forecast-list"></span>
-                    
+                    <h4>6-Day Forecast</h4>
+                    <span id="forecast-list"></span>                    
                 </div>
             </div>
         </main>
@@ -158,5 +168,6 @@
     <script src="scripts/getdates.js"></script>
     <script src="scripts/responsivemenu.js"></script>
     <script src="scripts/forecast.js"></script>
+    <script src="scripts/banner.js"></script>
 </body>
 </html>
