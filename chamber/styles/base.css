@@ -219,7 +219,7 @@ h1 {
     font-size: 1.25rem;
   }
   
-  .goals-grid, .business-grid {
+  .goals-grid, .spotlight-grid {
     display: grid;
     grid-template-columns: 1fr;
     grid-gap: 1.5rem;
@@ -232,9 +232,15 @@ h1 {
     font-size: 1.5rem;
   }
 
-  .goals-grid img, .business-grid img {
+  .goals-grid img, .spotlight-grid img {
     max-width: 100%;
-}
+  }
+
+  .spotlight {
+    display: flex;
+    flex-direction: column;   
+    border-radius: 5px;   
+  }
 
   .leadership-goal, .collaboration-goal, .progress-goal, .community-goal {
     display: flex;

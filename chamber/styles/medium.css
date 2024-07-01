@@ -17,10 +17,15 @@
         display: none;
     }
 
-    .goals-grid, .business-grid {
+    .goals-grid {
         grid-template-columns: 1fr 1fr;
     }
 
+    .spotlight {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        justify-items: center;
+    }
     .logo_name {
         flex-direction: row;
         
