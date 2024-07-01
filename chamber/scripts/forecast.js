@@ -13,7 +13,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 groupedForecasts = getTempsByDate(data.list) // groupedForecasts is a list of lists.  Multiple entries per date.
                 displayCurrentTemp(data.list[0]);
                 displayForecastTemps(groupedForecasts);
-                console.log(data);
             }
             else {
                 throw Error(await response.text());
