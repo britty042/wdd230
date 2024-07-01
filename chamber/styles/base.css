@@ -229,15 +229,14 @@ h1 {
     padding: 1rem;
     margin: 0 auto;
     text-align: center;
- 
   }
 
   h4 {
     font-size: 1.5rem;
   }
 
-  .goals-grid img, .spotlight-grid img {
-    max-width: 100%;
+  .goals-grid img{
+    max-width: 300px;
   }
 
   .spotlight {
@@ -249,8 +248,8 @@ h1 {
   .leadership-goal, .collaboration-goal, .progress-goal, .community-goal {
     display: flex;
     flex-direction: column;   
-    border-radius: 5px;     
-      
+    border-radius: 5px; 
+    align-items: center;      
   }
 
   .current-events, .weather {
