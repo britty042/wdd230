@@ -54,6 +54,7 @@ const createMemberCard = (company) => {
     memberDiv.innerHTML = `
         <img src="${company.img}" alt="${company.name} Logo" loading="lazy">
         <strong>${company.name}</strong>
+        <p>${company.membership} Member</p>
         <p>${company.address}</p>
         <p>${company.phoneNumber}</p>
         <a href="${company.webURL}" target="_blank">${company.webURL}</a>
