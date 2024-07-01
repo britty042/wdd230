@@ -41,7 +41,7 @@ const createMemberCard = (company) => {
     memberDiv.classList.add("member");
 
     memberDiv.innerHTML = `
-        <img src="${company.img}" alt="${company.name} Logo">
+        <img src="${company.img}" alt="${company.name} Logo loading="lazy"">
         
         <p>${company.membership} Member</p>
         <p>${company.address}</p>
