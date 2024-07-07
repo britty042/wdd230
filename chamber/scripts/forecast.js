@@ -62,10 +62,12 @@ document.addEventListener('DOMContentLoaded', function() {
 
         // For each date...
         dailyForecasts.forEach((forecast, index) => {
+            const forecastAt15 = forecast.find(entry => entry.dt_txt.includes("15:00:00"));
+            
             // Get the correct icon for the first entry for the specified date.
-            const forecastedIconsrc = `https://openweathermap.org/img/w/${forecast[0].weather[0].icon}.png`;
+            const forecastedIconsrc = `https://openweathermap.org/img/w/${forecastAt15.weather[0].icon}.png`;
             // Get the description for the first entry for the specified date and the first entry in weather.
-            let forecastedWeatherDescriptions = forecast[0].weather.map(item => {
+            let forecastedWeatherDescriptions = forecastAt15.weather.map(item => {
                 let desc = item.description;
                 const words = desc.split(" ");
                 for (let i = 0; i < words.length; i ++) {
@@ -90,7 +92,7 @@ document.addEventListener('DOMContentLoaded', function() {
             forecastedWeatherIcon.setAttribute('alt', capitalizedDesc);
             captionDesc.textContent = `${capitalizedDesc}`;
 
-            forecastTemp.textContent = `Temperature: ${Math.round(forecast[0].main.temp)}°F`;
+            forecastTemp.textContent = `Temperature: ${Math.round(forecastAt15.main.temp)}°F`;
 
             icon.appendChild(forecastedWeatherIcon);
             card.appendChild(weekday);
