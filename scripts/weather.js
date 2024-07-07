@@ -25,6 +25,7 @@ function displayResults(data) {
     currentTemp.innerHTML = `${temperature}&deg;F`;
     const iconsrc = `https://openweathermap.org/img/w/${data.weather[0].icon}.png`;
     
+    
     let weatherDescriptions = data.weather.map(item => {
         let desc = item.description;
         const words = desc.split(" ");
