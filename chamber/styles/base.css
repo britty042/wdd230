@@ -564,3 +564,7 @@ footer {
   font-size: 1rem;
 }
 
+.company-card a{
+  margin-bottom: 1rem;
+  color: var(--accent-color-2);
+}
