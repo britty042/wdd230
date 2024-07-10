@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const dailyForecasts = {};
     
         forecastData.forEach((forecast) => {
-            const forecastDate = new Date(forecast.dt * 1000).toLocaleDateString();
+            const forecastDate = new Date(forecast.dt * 1000).toLocaleDateString('en-US', {timeZone: 'GMT'});
     
             if (!dailyForecasts[forecastDate]) {
                 dailyForecasts[forecastDate] = [];
@@ -63,7 +63,7 @@ document.addEventListener('DOMContentLoaded', function() {
         // For each date...
         dailyForecasts.forEach((forecast, index) => {
             const forecastAt15 = forecast.find(entry => entry.dt_txt.includes("15:00:00"));
-            
+
             // Get the correct icon for the first entry for the specified date.
             const forecastedIconsrc = `https://openweathermap.org/img/w/${forecastAt15.weather[0].icon}.png`;
             // Get the description for the first entry for the specified date and the first entry in weather.
