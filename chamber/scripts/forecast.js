@@ -25,7 +25,8 @@ document.addEventListener('DOMContentLoaded', function() {
         const dailyForecasts = {};
     
         forecastData.forEach((forecast) => {
-            const forecastDate = new Date(forecast.dt * 1000).toLocaleDateString('en-US', {timeZone: 'GMT'});
+            // Use UTC date string for consistency
+            const forecastDate = new Date(forecast.dt * 1000).toISOString().slice(0, 10); // YYYY-MM-DD format
     
             if (!dailyForecasts[forecastDate]) {
                 dailyForecasts[forecastDate] = [];
@@ -34,9 +35,13 @@ document.addEventListener('DOMContentLoaded', function() {
             dailyForecasts[forecastDate].push(forecast);
         });
     
-        return Object.values(dailyForecasts);
+        // Sort the daily forecasts by date
+        const sortedDates = Object.keys(dailyForecasts).sort();
+        const sortedForecasts = sortedDates.map(date => dailyForecasts[date]);
+    
+        return sortedForecasts;
     }
-
+    
     function displayCurrentTemp(data) {
         const temperature = Math.round(data.main.temp);
         currentTemp.innerHTML = `${temperature}&deg;F`;
@@ -64,43 +69,45 @@ document.addEventListener('DOMContentLoaded', function() {
         dailyForecasts.forEach((forecast, index) => {
             const forecastAt15 = forecast.find(entry => entry.dt_txt.includes("15:00:00"));
 
-            // Get the correct icon for the first entry for the specified date.
-            const forecastedIconsrc = `https://openweathermap.org/img/w/${forecastAt15.weather[0].icon}.png`;
-            // Get the description for the first entry for the specified date and the first entry in weather.
-            let forecastedWeatherDescriptions = forecastAt15.weather.map(item => {
-                let desc = item.description;
-                const words = desc.split(" ");
-                for (let i = 0; i < words.length; i ++) {
-                    words[i] = words[i][0].toUpperCase() + words[i].substr(1);
-                }
-            return words.join(" ");
-            });
-            
-            const capitalizedDesc = forecastedWeatherDescriptions.join(" ");
+            if (forecastAt15) {
+                // Get the correct icon for the first entry for the specified date.
+                const forecastedIconsrc = `https://openweathermap.org/img/w/${forecastAt15.weather[0].icon}.png`;
+                // Get the description for the first entry for the specified date and the first entry in weather.
+                let forecastedWeatherDescriptions = forecastAt15.weather.map(item => {
+                    let desc = item.description;
+                    const words = desc.split(" ");
+                    for (let i = 0; i < words.length; i ++) {
+                        words[i] = words[i][0].toUpperCase() + words[i].substr(1);
+                    }
+                return words.join(" ");
+                });
+                
+                const capitalizedDesc = forecastedWeatherDescriptions.join(" ");
 
-            let card = document.createElement("section");
-            let weekday = document.createElement("h4");
-            let forecastTemp = document.createElement("h5");
-            let icon = document.createElement("figure");
-            let forecastedWeatherIcon = document.createElement("img");
-            let captionDesc = document.createElement("p");
+                let card = document.createElement("section");
+                let weekday = document.createElement("h4");
+                let forecastTemp = document.createElement("h5");
+                let icon = document.createElement("figure");
+                let forecastedWeatherIcon = document.createElement("img");
+                let captionDesc = document.createElement("p");
 
-            let forecastDate = new Date(forecast[0].dt * 1000);
-            weekday.textContent = forecastDate.toLocaleDateString("en-US", { weekday: "long" });
+                let forecastDate = new Date(forecast[0].dt * 1000);
+                weekday.textContent = forecastDate.toLocaleDateString("en-US", { weekday: "long" });
 
-            forecastedWeatherIcon.setAttribute('src', forecastedIconsrc);
-            forecastedWeatherIcon.setAttribute('alt', capitalizedDesc);
-            captionDesc.textContent = `${capitalizedDesc}`;
+                forecastedWeatherIcon.setAttribute('src', forecastedIconsrc);
+                forecastedWeatherIcon.setAttribute('alt', capitalizedDesc);
+                captionDesc.textContent = `${capitalizedDesc}`;
 
-            forecastTemp.textContent = `Temperature: ${Math.round(forecastAt15.main.temp)}°F`;
+                forecastTemp.textContent = `Temperature: ${Math.round(forecastAt15.main.temp)}°F`;
 
-            icon.appendChild(forecastedWeatherIcon);
-            card.appendChild(weekday);
-            card.appendChild(forecastTemp);
-            card.appendChild(icon);
-            card.appendChild(captionDesc);
+                icon.appendChild(forecastedWeatherIcon);
+                card.appendChild(weekday);
+                card.appendChild(forecastTemp);
+                card.appendChild(icon);
+                card.appendChild(captionDesc);
 
-            forecastList.appendChild(card);
+                forecastList.appendChild(card);
+            }    
         });
     };
 

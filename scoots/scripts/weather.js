@@ -1,9 +1,10 @@
 document.addEventListener('DOMContentLoaded', function() {
     const currentTemp = document.querySelector("#current-temp");
+    const currentHumid = document.querySelector("#current-humid")
     const captionDesc = document.querySelector("figcaption");
     const weatherIcon = document.querySelector("#weather-icon");
 
-    const url = `https://api.openweathermap.org/data/2.5/forecast?lat=20.50&lon=-86.88&appid=e356e16f0092b81f81328a0edd061471&units=imperial`;
+    const url = `https://api.openweathermap.org/data/2.5/forecast?lat=41.14&lon=-112.05&appid=e356e16f0092b81f81328a0edd061471&units=imperial`;
 
     async function apiFetch() {  
         try {
@@ -11,6 +12,7 @@ document.addEventListener('DOMContentLoaded', function() {
             if (response.ok)  {
                 const data = await response.json();
                 groupedForecasts = getTempsByDate(data.list) // groupedForecasts is a list of lists.  Multiple entries per date.
+                maxTemp(data);
                 displayCurrentTemp(data.list[0]);
                 displayForecastTemps(groupedForecasts);
             }
@@ -25,7 +27,8 @@ document.addEventListener('DOMContentLoaded', function() {
         const dailyForecasts = {};
     
         forecastData.forEach((forecast) => {
-            const forecastDate = new Date(forecast.dt * 1000).toLocaleDateString();
+            // Use UTC date string for consistency
+            const forecastDate = new Date(forecast.dt * 1000).toISOString().slice(0, 10); // YYYY-MM-DD format
     
             if (!dailyForecasts[forecastDate]) {
                 dailyForecasts[forecastDate] = [];
@@ -34,12 +37,17 @@ document.addEventListener('DOMContentLoaded', function() {
             dailyForecasts[forecastDate].push(forecast);
         });
     
-        return Object.values(dailyForecasts);
+        // Sort the daily forecasts by date
+        const sortedDates = Object.keys(dailyForecasts).sort();
+        const sortedForecasts = sortedDates.map(date => dailyForecasts[date]);
+    
+        return sortedForecasts;
     }
-
+    
     function displayCurrentTemp(data) {
         const temperature = Math.round(data.main.temp);
         currentTemp.innerHTML = `${temperature}&deg;F`;
+        currentHumid.textContent = `${data.main.humidity}% Humidity`
         const iconsrc = `https://openweathermap.org/img/w/${data.weather[0].icon}.png`;
         
         let weatherDescriptions = data.weather.map(item => {
@@ -57,13 +65,38 @@ document.addEventListener('DOMContentLoaded', function() {
         captionDesc.textContent = `${capitalizedDesc}`;
     }
 
+    function maxTemp(dailyForecasts) {
+         
+        let maxTempElement = document.querySelector(".max-temp");
+        let maxTemperature = -Infinity;
+        let maxTempToday= '';
+
+        
+        dailyForecasts.forEach(forecast => {
+          
+            const forecastDate = new Date(forecast.dt * 1000).toLocaleDateString('en-US', {timeZone: 'GMT'});
+
+            const today = new Date().toLocaleDateString('en-US', {timeZone: 'GMT'});
+
+            if (forecastDate === today  && forecast.main.temp > maxTemperature) {
+               
+                    maxTemperature = forecast.main.temp; 
+                    maxTempToday = forecast.dt_txt; 
+            }
+            return {maxTemperature, maxTempDate};
+    });   
+
+    maxTempElement.textContent = `Today's High Temperature: ${maxTemperature}`;
+}
+  
+
     function displayForecastTemps(dailyForecasts) {
         let forecastList = document.querySelector("#forecast-temp");
 
         // For each date...
         dailyForecasts.forEach((forecast, index) => {
             const forecastAt15 = forecast.find(entry => entry.dt_txt.includes("15:00:00"));
-            
+
             // Get the correct icon for the first entry for the specified date.
             const forecastedIconsrc = `https://openweathermap.org/img/w/${forecastAt15.weather[0].icon}.png`;
             // Get the description for the first entry for the specified date and the first entry in weather.
@@ -75,6 +108,13 @@ document.addEventListener('DOMContentLoaded', function() {
                 }
             return words.join(" ");
             });
+
+            let iconDesc = forecastAt15.weather.map(item => {
+                let caption = item.main;
+                capitalizedCaption = caption.toUpperCase();
+
+                return capitalizedCaption;
+            });
             
             const capitalizedDesc = forecastedWeatherDescriptions.join(" ");
 
@@ -83,21 +123,24 @@ document.addEventListener('DOMContentLoaded', function() {
             let forecastTemp = document.createElement("h5");
             let icon = document.createElement("figure");
             let forecastedWeatherIcon = document.createElement("img");
+            let weatherDesc = document.createElement("p");
             let captionDesc = document.createElement("p");
+                
 
             let forecastDate = new Date(forecast[0].dt * 1000);
             weekday.textContent = forecastDate.toLocaleDateString("en-US", { weekday: "long" });
 
             forecastedWeatherIcon.setAttribute('src', forecastedIconsrc);
             forecastedWeatherIcon.setAttribute('alt', capitalizedDesc);
+            weatherDesc.textContent = `${iconDesc}`;
             captionDesc.textContent = `${capitalizedDesc}`;
 
             forecastTemp.textContent = `Temperature: ${Math.round(forecastAt15.main.temp)}°F`;
-
             icon.appendChild(forecastedWeatherIcon);
             card.appendChild(weekday);
             card.appendChild(forecastTemp);
             card.appendChild(icon);
+            card.appendChild(weatherDesc);
             card.appendChild(captionDesc);
 
             forecastList.appendChild(card);

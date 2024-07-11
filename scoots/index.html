@@ -29,7 +29,7 @@
     <div class="banner">
         <div class="banner-content">
             <div class="banner-text">
-                <strong>Provide the High temp here</strong>
+                <strong class="max-temp"></strong>
             </div>
             <button type="button" class="banner-close">
                 <span class="material-icons">close</span>   
@@ -103,7 +103,8 @@
             <div id="weather-info">
                 <div class="current-weather">
                     <h4>Current Temperature</h4>
-                    <span id="current-temp"></span>
+                    <h5 id="current-temp"></h5>
+                    <h5 id="current-humid"></h5>
                     <figure>
                         <img id="weather-icon" src="images/placeholder.webp" alt="">
                         <figcaption></figcaption>
@@ -112,10 +113,6 @@
                 <div class="forecast-weather">
                     <h4>Tomorrow's Temperature</h4>
                     <span id="forecast-temp"></span>
-                    <figure>
-                        <img id="weather-icon" src="images/placeholder.webp" alt="">
-                        <figcaption></figcaption>
-                    </figure>
                 </div>
             </div>
         </main>
