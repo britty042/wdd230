@@ -26,44 +26,29 @@
     <link rel="stylesheet" href="styles/larger.css">
 </head>
 <body>
-    <div class="banner">
-        <div class="banner-content">
-            <div class="banner-text">
-                <strong>Provide the High temp here</strong>
-            </div>
-            <button type="button" class="banner-close">
-                <span class="material-icons">close</span>   
-            </button>
-        </div>
-    </div>
     <div id="content">
         <header>
             <div class="header-content">
                 <div class="logo-area">
                     <a id="logo_link" href="index.html">
                         <img class="logo" src="images/logo.webp" alt="Logo Image">
-                    </a>
-                    <h1>Scoots Motor Scooter Rentals</h1>
-                </div>
-            </div>  
-            <label class="switch" for="darkModeToggle">
-                <input type="checkbox" id="darkModeToggle" onchange="darkMode()">
-                <span class="slider round"></span>
-            </label>      
-        </header>        
-        <nav class="navigation">
-            <a href="index.html">Home</a>
-            <a href="rentals.html">Rentals</a>
-            <a href="reservations.html">Reservations</a>
-            <a href="contact.html">Contact Us</a>
-            <button id="menu"></button>
-        </nav>
+                    </a>                    
+                </div>                      
+            <nav class="navigation">
+                <a href="index.html">Home</a>
+                <a href="rentals.html">Rentals</a>
+                <a href="reservations.html">Reservations</a>
+                <a href="contact.html">Contact Us</a>
+                <button id="menu"></button>
+            </nav>
+            </div> 
+        </header> 
         <main>
-            <table>
+            <table class="pricing-table">
                 <caption>Rental Pricing for Scoots Motor Scooters</caption>
                 <thead>
-                    <tr>
-                        <th colspan="4" scope="colgroup">Rental Pricing</th>
+                    <tr class="black">
+                        <th colspan="6" scope="colgroup">Rental Pricing</th>
                     </tr>
                     <tr>
                         <th colspan="2" scope="col"></th>
@@ -71,50 +56,16 @@
                         <th colspan="2" scope="col">Walk-in</th>
                     </tr>
                     <tr>
-                        <th scope="col">Rental Type</th>
-                        <th scope="col">Max. Persons</th>
-                        <th scope="col">Half Day (3 hrs.)</th>
-                        <th scope="col">Full Day</th>
-                        <th scope="col">Half Day (3 hrs.)</th>
-                        <th scope="col">Full Day</th>
+                        <th class="type" scope="col">Rental Type</th>
+                        <th class="people" scope="col">Max. Persons</th>
+                        <th class="rhalf" scope="col">Half Day (3 hrs.)</th>
+                        <th class="rfull" scope="col">Full Day</th>
+                        <th class="whalf" scope="col">Half Day (3 hrs.)</th>
+                        <th class="wfull" scope="col">Full Day</th>
+                    </tr>
                 </thead>
-                <tbody>
-                    <tr>
-                        <td>Honda Metro Scooter</td>
-                        <td>✔️</td>
-                        <td>✔️</td>
-                        <td>✔️</td>
-                    </tr>
-                    <tr>
-                        <td class="gray">Honda Dio Scooter</td>
-                        <td>❌</td>
-                        <td>✔️</td>
-                        <td>✔️</td>
-                    </tr>
-                    <tr>
-                        <td>Honda PCX150 Scooter</td>
-                        <td>❌</td>
-                        <td>❌</td>
-                        <td>✔️</td>
-                    </tr>
-                    <tr>
-                        <td class="gray">Honda Pioneer ATV</td>
-                        <td>❌</td>
-                        <td>✔️</td>
-                        <td>✔️</td>
-                    </tr>
-                    <tr>
-                        <td>Jeep Wrangler - 4 door with a/c</td>
-                        <td>❌</td>
-                        <td>❌</td>
-                        <td>✔️</td>
-                    </tr>
-                    <tr>
-                        <td class="gray">Jeep Wrangler - 2 door</td>
-                        <td>❌</td>
-                        <td>✔️</td>
-                        <td>✔️</td>
-                    </tr>
+                <tbody class="rental-pricing">
+                 
                 </tbody>
             </table> 
         </main>
@@ -147,6 +98,7 @@
             </div>
         </footer>
         <script src="scripts/rentals.js"></script>
+        <script src="scripts/responsivemenu.js"></script>
     </div>
 </body>
 </html>
