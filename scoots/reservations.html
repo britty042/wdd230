@@ -3,10 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Scoots Website Final Project for WDD230</title>
+    <title>Scoots Website Final Project for WDD230 Reservations Page</title>
     <meta name="author" content="Brittney Child">
-    <meta name="description" content="This is a course assignment to design a website for a motor scooter rental company called Scoots. This site will include inforamtion regarding
-        rental pricing, reservations, as well as generalized information about contacting the company, temperature, and any other relevant details.">
+    <meta name="description" content="This is the reservations page, which include the service agreement and contract, as well as the form to fill out for making a reservation.">
     <meta property="og:title" content="Brittney Child - WDD230 Scoots Final Project">
     <meta property="og:type" content="website">
     <meta property="og:image" content="https://britty042.github.io/wdd230/scoots/images/logo.webp">
@@ -37,7 +36,7 @@
             <nav class="navigation">
                 <a href="index.html">Home</a>
                 <a href="rentals.html">Rentals</a>
-                <a href="reservations.html">Reservations</a>
+                <a href="reservations.html" class="active-page">Reservations</a>
                 <a href="contact.html">Contact Us</a>
                 <button id="menu"></button>
             </nav>
@@ -66,16 +65,15 @@
                                 <label>First Name* <input type="text" id="fname" name="fname" required></label>
                                 <label>Last Name* <input type="text" id="lname" name="lname" required></label>
                                 <label>Home State/Country* <input type="text" id="home" name="home" required></label>
-                                <label>Email<input type="email" id="email" name="email" placeholder="somone@domain.com" title="A valid email address." pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required></label>
+                                <label>Email*<input type="email" id="email" name="email" placeholder="somone@domain.com" title="A valid email address." pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required></label>
                                 <label>Mobile Phone Number* <input type="tel" id="phone" name="phone" required></label>
                         </fieldset>        
                         <fieldset>
                             <legend>Rental Information</legend>        
                                 <label>Rental Date* <input type="text" id="date" name="date" placeholder="MM/DD/YY" required></label>
-                                <div>Rental Location</div>
-                                <label><input type="radio" name="location" value="half">Half-Day </label>
-                                <label><input type="radio" name="location" value="full">Full Day</label>
-                                <label><input type="radio" name="location" value="full">Full Day</label>
+                                <div>Rental Length</div>
+                                <label><input type="radio" name="length" value="half">Half-Day </label>
+                                <label><input type="radio" name="length" value="full">Full Day</label>
                                 <div>Rental Location</div>
                                 <label><input type="radio" name="location" value="ferry"> Playa del Carmen-Cozumel Ferry</label>
                                 <label><input type="radio" name="location" value="terminal"> Terminal Puerta Maya</label>
@@ -94,7 +92,7 @@
                         <fieldset>
                             <legend>Additional Information</legend>
                                 <label>Cruise Line<input type="text" id="cruiseline" name="cruiseline"></label>
-                                <label>Special Accommodations/Comments<textarea type="text" id="comments" name="comments" cols="30" rows="15"></textarea></label>
+                                <label>Special Accommodations/Comments<textarea type="text" id="comments" name="comments" cols="30" rows="15" placeholder="Includes special needs, drop-off location request, or anything else you feel we should know."></textarea></label>
                                 <label><input type="hidden" id="datenow" name="datenow"></label>
                                 <input type="submit" value="Make Reservation">
                         </fieldset>

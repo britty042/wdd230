@@ -69,4 +69,25 @@
     .wf1 fieldset {
         margin-left: 5rem;
     }
+
+    .thank-you fieldset{
+        min-width: 600px;
+        max-width: 800px;    
+    }
+
+    .thank-you input[type="text"],
+    .thank-you input[type="email"],
+    .thank-you textarea {
+     max-width: 800px;
+    }
+
+    .thank-you input[type="submit"] {
+        margin: -1rem 15% 2rem 15%;
+    }
+
+   .maps{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 4rem;
+    }  
 }
