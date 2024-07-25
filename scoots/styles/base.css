@@ -382,7 +382,7 @@ caption{
 }
 
 .wf1 input:required {
-    border-right: solid 8px red;
+    border-right: solid 8px var(--secondary-color);
 }
 
 .wf1 input:required:valid {
