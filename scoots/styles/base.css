@@ -256,6 +256,10 @@ footer {
     flex-direction: column;
 }
 
+.logo_name a{
+    color: var(--background-color);
+}
+
 footer img {
         max-width: 300px;
         margin: 0 auto;
